@@ -84,8 +84,8 @@ def load_tables():
     Load the tables
     """
     words = []
-    utable = numpy.load(path_to_utable, encoding='latin1')
-    btable = numpy.load(path_to_btable, encoding='latin1')
+    utable = numpy.load(path_to_utable, encoding='latin1', allow_pickle=True) # Aaron added this
+    btable = numpy.load(path_to_btable, encoding='latin1', allow_pickle=True) # and this
     f = open(path_to_dictionary, 'rb')
     for line in f:
         words.append(line.decode('utf-8').strip())
