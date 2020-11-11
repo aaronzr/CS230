@@ -1,3 +1,4 @@
+pip install langdetect
 if [ ! -d ./skipthoughts/models ]
 then
     mkdir skipthoughts/models
